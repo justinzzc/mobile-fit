@@ -98,7 +98,7 @@
                 option = extendOptions({
                     size: sizeOrOption
                 });
-            } else if ('object' != typeof sizeOrOption) {
+            } else if ('object' === typeof sizeOrOption) {
                 option = extendOptions(sizeOrOption);
             }
 

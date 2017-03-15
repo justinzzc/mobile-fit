@@ -6,10 +6,76 @@
     <script src="../mobileFit.js"></script>
 
     <script>
-        mobileFit.autoFit(750);
-    </script>
-</head>
-<body>
+        function onload(){
+            mobileFit.autoFit({
+                size: 365,
+                matchSize: 450
+            });
+        }
 
+    </script>
+
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            html,body{
+                background: #f4f4f4;
+            }
+
+            .page-container{
+                /*height: 100%;*/
+                overflow-x:hidden;
+            }
+            .item-image{
+                height: 150px;
+                background: #555;
+                margin-bottom: 5px;
+            }
+
+            .item-list{
+                width: 375px;
+                /*margin-left: -2.5px;*/
+                overflow: auto;
+            }
+            .item{
+                float: left;
+                width: 179.5px;
+                margin-right: 5px;
+                height: 240px;
+                background: #fff;
+                margin-bottom: 5px;
+                font-size: 30px;
+            }
+
+            .page-container{
+                width: 365px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            @media screen and (max-width: 450px){
+
+                .page-container{
+                    width: auto;
+                }
+            }
+    </style>
+
+</head>
+<body onload="onload()">
+<div class="page-container">
+    <div class="item-image"></div>
+    <ul class="item-list">
+        <li class="item">
+            div.
+        </li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+</div>
 </body>
 </html>
